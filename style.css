@@ -1,0 +1,112 @@
+body {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100vh;
+    background: url(pexels-pixabay-159472.jpg) 50% 50% no-repeat;
+    background-size: cover;
+    display: table;
+}
+
+.content {
+    margin-top: 220px
+}
+
+.marqueebody {
+color: #111111;
+height: 29vh;
+display: flex;
+justify-content: center;
+align-items: center;
+}
+
+:root {
+    --marquee-width: 80vw;
+    --marquee-height: 50vw;
+    --marquee-elements: 3;
+    --marquee-elements-displayed: 5;
+    --marquee-element-width: calc(var(--marquee-wideth)/var(--marquee-elements-displayed));
+    --marquee-animation-duration: 12s;
+}
+
+.marquee {
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    justify-content: flex-start;
+    width: 80vw;
+    height: 50vh;
+    background-color: transparent;
+    color: #eeeeee; 
+    overflow: hidden;
+    position: relative;
+}
+
+.marquee:before, marquee:after {
+    position: absolute;
+    top: 0;
+    width: 10rem;
+    height: 100%;
+    content: "";
+    z-index: 1;
+}
+
+.marquee:before {
+    left: 0;
+    background: linear-gradient(to right, #111111 0%, transparent 100%);
+}
+
+.marquee:after {
+    right: 0;
+    background: linear-gradient(to left, #111111 0%, transparent 100%);
+}
+
+.marquee-content {
+    list-style: none;
+    height: 100%;
+    display: flex;
+    animation: scrolling 12s linear infinite;
+}
+@keyframes scrolling {
+    0% {transform: translateX(0); }
+    100% {transform: translateX(calc(-1*20vw*9)); }
+}
+
+.marquee-content li {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 20vw;
+    flex-shrink: 0;
+    font-size: 4rem;
+    white-space: nowrap;
+    
+}
+
+
+.marquee-content:hover {
+    animation-play-state: paused;
+}
+
+h1 {
+    color: white;
+    font-family: sans-serif;
+    font-weight: 150;
+    font-size: 500%;
+    text-transform: uppercase;
+    text-shadow: 6px 30px 20px rgba(0, 0, 0, 0.2);
+    margin-bottom: 0;
+    text-align: center;
+}
+
+p {
+    color: white;
+    font-family: sans-serif, impact;
+    font-weight: lighter;
+    text-transform: uppercase;
+    letter-spacing: 8px;
+    font-size: 20px;
+    text-align: center;
+    margin-top: 10px;
+}
+
