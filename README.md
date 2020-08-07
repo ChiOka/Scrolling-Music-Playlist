@@ -1,3 +1,3 @@
 # Scrolling-Music-Playlist
 
-![github](https://imgur.com/a/1wBTxUv.gif)
+![](https://media.giphy.com/media/KG5F1SDKin05EdM0xT/giphy.gif)
